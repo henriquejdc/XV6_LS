@@ -1,5 +1,5 @@
 // Segments in proc->gdt.
-#define NSEGS     5
+#define NSEGS     7
 //Tickets usados na loteria
 #define MAX_TICKETS 20            //tickets maximo de processos 
 #define MIN_TICKETS 1             //tickets minimo de processos
