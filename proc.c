@@ -267,7 +267,7 @@ wait(void)
 
 int randomico=1;
 int random(){
-  randomico =  1244525 + 423904223; //gera o numero randomico
+  randomico = randomico* 1244525 + 423904223; //gera o numero randomico
   if(randomico<0){
     return (randomico*-1); //se for negativo, torna ele positivo
   }
