@@ -1,9 +1,9 @@
 // Segments in proc->gdt.
 #define NSEGS     7
 //Tickets usados na loteria
-#define MAX_TICKETS 20            //tickets maximo de processos 
-#define MIN_TICKETS 1             //tickets minimo de processos
-#define DEFAULT_TICKETS 8         //default de tickets
+#define MAX_TICKETS 200           //tickets maximo de processos 
+#define MIN_TICKETS 50            //tickets minimo de processos
+#define DEFAULT_TICKETS 100        //default de tickets
 
 // Per-CPU state
 struct cpu {
