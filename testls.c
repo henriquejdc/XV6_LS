@@ -9,21 +9,24 @@
 #define T 112345678
 
 void tempo(){ //função para gastar tempo 
-    int j;
-    j=T;
+    int i,j;
+    i=j=T;
     while(j--){}
+    while(i--){}
 }
 
 int main(){
     int pid;
     int i;
     for (i=0;i<PROCESS;i++){ //cria processos filhos
-        if(i<(PROCESS%3)){//fork do int 1 
-            pid=fork(1); 
-        }else if(i>=(PROCESS%3) &&  i<(2*(PROCESS%3))){ //fork do int 4
-            pid=fork(4);
+        if(i<(PROCESS/4)){//fork do int 1 
+            pid=fork(100); 
+        }else if(i>=(PROCESS/4) &&  i<(2*(PROCESS/4))){ //fork do int 4
+            pid=fork(0);
+        }else if(i>=(2*PROCESS/4) &&  i<(3*(PROCESS/4))){
+            pid=fork(100); //fork do int  8
         }else{
-            pid=fork(8); //fork do int  8
+            pid=fork(-10); //fork do int  8
         }if(pid == 0){
             tempo(); //gasta tempo
             exit();
