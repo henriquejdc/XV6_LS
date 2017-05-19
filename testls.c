@@ -9,8 +9,8 @@
 #define T 112345678
 
 void tempo(){ //função para gastar tempo 
-    int i,j;
-    i=T;
+    int j;
+    j=T;
     while(j--){}
 }
 
