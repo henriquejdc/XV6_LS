@@ -5,23 +5,22 @@
 #include "user.h"       //functios like printf and syscalls
 
 #define STDOUT 1        
-#define PROCESS 30
+#define PROCESS 40
 #define T 112345678
 
 void tempo(){ //função para gastar tempo 
     int i,j;
-    i=j=T;
+    i=T;
     while(j--){}
-    while(i--){}
 }
 
 int main(){
     int pid;
     int i;
     for (i=0;i<PROCESS;i++){ //cria processos filhos
-        if(i<(PROCESS/3)){//fork do int 1 
+        if(i<(PROCESS%3)){//fork do int 1 
             pid=fork(1); 
-        }else if(i>=(PROCESS/3) &&  i<(2*(PROCESS/3))    ){ //fork do int 4
+        }else if(i>=(PROCESS%3) &&  i<(2*(PROCESS%3))){ //fork do int 4
             pid=fork(4);
         }else{
             pid=fork(8); //fork do int  8
